@@ -1,0 +1,19 @@
+# Node dependencies
+node_modules/
+
+# Compiled C++ and Pin binaries
+*.exe
+*.dll
+*.so
+*.o
+*.obj
+
+# Generated simulation data
+trace.out
+cache_details.out
+cache_hits.out
+cache_simulator_heatmap.png
+
+# Python caches
+__pycache__/
+*.pyc

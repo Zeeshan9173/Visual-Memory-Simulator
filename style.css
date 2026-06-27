@@ -1,0 +1,26 @@
+body { font-family: 'Courier New', monospace; background: #1e1e1e; color: #d4d4d4; padding: 20px; }
+.container { max-width: 900px; margin: auto; background: #252526; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+h2 { color: #569cd6; border-bottom: 1px solid #3e3e42; padding-bottom: 10px; }
+
+.global-config { margin-bottom: 30px; background: #333; padding: 15px; border-radius: 4px; }
+input { background: #3c3c3c; color: white; border: 1px solid #555; padding: 5px; width: 80px; }
+
+.cache-row { 
+    display: grid; 
+    grid-template-columns: 120px 150px 150px 1fr; 
+    align-items: center; 
+    gap: 20px; 
+    margin-bottom: 15px; 
+    padding: 10px;
+    border-bottom: 1px solid #333;
+}
+
+.size-display { color: #4ec9b0; font-weight: bold; }
+.run-btn { 
+    width: 100%; padding: 15px; background: #0e639c; color: white; 
+    border: none; border-radius: 4px; cursor: pointer; font-size: 16px; margin-top: 20px;
+}
+.run-btn:hover { background: #1177bb; }
+
+.output-panel { margin-top: 30px; background: #000; padding: 15px; border-radius: 4px; border: 1px solid #333; }
+#consoleOutput { color: #b5cea8; white-space: pre-wrap; }

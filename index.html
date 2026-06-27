@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cache Control Center</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Cache Simulator Configuration</h2>
+        
+        <div class="global-config">
+            <label>Shared Block Size (Bytes):</label>
+            <input type="number" id="block_size" value="64" oninput="calculateAll()">
+        </div>
+
+        <div class="cache-rows">
+            <div class="cache-row">
+                <span><b>L1 Cache:</b></span>
+                <div class="input-group">
+                    <label>Sets</label>
+                    <input type="number" id="l1_sets" value="128" oninput="calculateAll()">
+                </div>
+                <div class="input-group">
+                    <label>Assoc</label>
+                    <input type="number" id="l1_assoc" value="4" oninput="calculateAll()">
+                </div>
+                <div class="size-display">Size: <span id="l1_kb">32</span> KB</div>
+            </div>
+
+            <div class="cache-row">
+                <span><b>L2 Cache:</b></span>
+                <div class="input-group">
+                    <label>Sets</label>
+                    <input type="number" id="l2_sets" value="1024" oninput="calculateAll()">
+                </div>
+                <div class="input-group">
+                    <label>Assoc</label>
+                    <input type="number" id="l2_assoc" value="8" oninput="calculateAll()">
+                </div>
+                <div class="size-display">Size: <span id="l2_kb">512</span> KB</div>
+            </div>
+
+            <div class="cache-row">
+                <span><b>L3 Cache:</b></span>
+                <div class="input-group">
+                    <label>Sets</label>
+                    <input type="number" id="l3_sets" value="2048" oninput="calculateAll()">
+                </div>
+                <div class="input-group">
+                    <label>Assoc</label>
+                    <input type="number" id="l3_assoc" value="16" oninput="calculateAll()">
+                </div>
+                <div class="size-display">Size: <span id="l3_kb">2048</span> KB</div>
+            </div>
+        </div>
+
+        <button class="run-btn" onclick="runCppSimulation()">Run Simulation (trace.out)</button>
+
+        <div class="output-panel">
+            <h3>C++ Console Output:</h3>
+            <pre id="consoleOutput">Waiting for simulation...</pre>
+        </div>
+    </div>
+    <div class="output-panel">
+            <h3>C++ Console Output:</h3>
+            <pre id="consoleOutput">Waiting for simulation...</pre>
+            
+            <h3 style="margin-top: 20px;">Visualization:</h3>
+            <img id="heatmapImage" src="" alt="Heatmap will appear here once the simulation finishes" style="max-width: 100%; display: none; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
